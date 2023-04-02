@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/bg_input_field_enabled.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_close.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_eye_off.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_eye_open.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rounded_green.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rounded_grey.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/selector_button_otten_green.xml" value="0.1" />
+        <entry key="app/src/main/res/font/font.xml" value="0.10740740740740741" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.26510416666666664" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_story_detail.xml" value="0.12892603850050657" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

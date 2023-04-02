@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login_fragment">
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.example.storyapps.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <!--action start-->
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/register_fragment"
+        android:name="com.example.storyapps.ui.signup.RegisterFragment"
+        android:label="RegisterFragment" />
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.example.storyapps.ui.home.HomeFragment"
+        android:label="HomeFragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/post_story_fragment"
+        android:name="com.example.storyapps.ui.post_story.PostStoryFragment"
+        android:label="PostStoryFragment" />
+
+    <fragment
+        android:id="@+id/story_detail_fragment"
+        android:name="com.example.storyapps.ui.story_detail.StoryDetailFragment"
+        android:label="StoryDetailFragment">
+
+    </fragment>
+
+</navigation>

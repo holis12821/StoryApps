@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.login.LoginFragment">
+
+    <!--Section Toolbar-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--Section Content-->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/space_big_medium"
+            android:paddingLeft="@dimen/space_super_small"
+            android:paddingRight="@dimen/space_super_small"
+            android:paddingBottom="@dimen/space_big_medium">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title_login"
+                style="@style/TextViewBoldWrap"
+                android:text="@string/login_title"
+                android:textColor="@color/dark_blue_500"
+                android:textSize="@dimen/space_text_super_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_email"
+                style="@style/TextViewBoldWrap"
+                android:layout_marginTop="@dimen/space_big_large_medium"
+                android:text="@string/user_email"
+                android:textColor="@color/dark_blue_500"
+                android:textSize="@dimen/space_text_large_medium"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_login"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.example.storyapps.ui.component.EmailEditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="@dimen/space_medium"
+                android:paddingLeft="@dimen/space_large"
+                android:paddingRight="@dimen/space_large"
+                app:layout_constraintStart_toStartOf="@+id/tv_email"
+                app:layout_constraintEnd_toEndOf="@+id/edt_password"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email"
+                tools:background="@drawable/bg_input_field_enabled" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_email_error"
+                style="@style/TextViewRegularWrap"
+                android:layout_marginTop="@dimen/space_medium_small"
+                android:textColor="@color/danger"
+                android:textSize="@dimen/space_text_medium_large"
+                app:layout_constraintStart_toStartOf="@+id/edt_email"
+                app:layout_constraintTop_toBottomOf="@+id/edt_email"
+                tools:text="Email harus di isi" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_password"
+                style="@style/TextViewBoldWrap"
+                android:layout_marginTop="@dimen/space_large"
+                android:text="@string/user_password"
+                android:textColor="@color/dark_blue_500"
+                android:textSize="@dimen/space_text_large_medium"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email_error"
+                app:layout_constraintStart_toStartOf="@+id/tv_email_error" />
+
+            <com.example.storyapps.ui.component.PasswordEditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="@dimen/space_medium"
+                android:paddingLeft="@dimen/space_large"
+                android:paddingRight="@dimen/space_large"
+                android:maxLength="25"
+                app:layout_constraintStart_toStartOf="@+id/tv_password"
+                app:layout_constraintTop_toBottomOf="@+id/tv_password"
+                tools:background="@drawable/bg_input_field_enabled" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_password_error"
+                style="@style/TextViewRegularWrap"
+                android:layout_marginTop="@dimen/space_medium_small"
+                android:textColor="@color/danger"
+                android:textSize="@dimen/space_text_medium_large"
+                app:layout_constraintStart_toStartOf="@+id/edt_password"
+                app:layout_constraintTop_toBottomOf="@+id/edt_password"
+                tools:text="Password harus di isi" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="@dimen/space_big_medium"
+                android:background="@drawable/selector_button_otten_green"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="@+id/tv_password_error"
+                app:layout_constraintEnd_toEndOf="@+id/edt_password"
+                app:layout_constraintTop_toBottomOf="@+id/tv_password_error" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_register"
+                style="@style/TextViewMatchWrap"
+                android:layout_marginTop="@dimen/space_big_large_medium"
+                android:text="@string/login_btn_register"
+                android:textColor="@color/dark_blue_500"
+                android:textSize="@dimen/space_text_large_medium"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/btn_login"
+                app:layout_constraintStart_toStartOf="@+id/btn_login"
+                app:layout_constraintEnd_toEndOf="@+id/btn_login"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_help"
+                style="@style/TextViewMatchWrap"
+                android:layout_marginTop="@dimen/space_super_big_small"
+                android:text="@string/login_btn_help"
+                android:textSize="@dimen/space_text_large"
+                android:textColor="@color/dark_grey"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="@+id/btn_register"
+                app:layout_constraintEnd_toEndOf="@+id/btn_register"
+                app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
